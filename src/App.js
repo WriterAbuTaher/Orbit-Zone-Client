@@ -1,11 +1,12 @@
-
+import { Toaster } from "react-hot-toast";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./Routes/Route";
 
 function App() {
   return (
     <>
-      <div className="flex items-center justify-center h-screen animate-bounce">
-        <h1 className="text-5xl">Hello World</h1>
-      </div>
+      <RouterProvider router={router}></RouterProvider>
+      <Toaster></Toaster>
     </>
   );
 }
