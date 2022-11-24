@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
@@ -34,12 +35,12 @@ const Hero = () => {
                 </div>
                 <div className="absolute bottom-8 w-full">
                     <div className="container m-auto px-6 flex items-end justify-between md:px-12 lg:px-7">
-                        <a href="" className="hidden space-x-4 md:flex md:items-center">
+                        <Link to='/about' className="hidden space-x-4 md:flex md:items-center">
                             <div className="text-gray-600 dark:text-gray-400">
                                 <span className="text-sm">What You Know ?</span>
                                 <p className="font-semibold text-gray-700 dark:text-gray-300">More About Our Platform</p>
                             </div>
-                        </a>
+                        </Link>
                         <div>
                             <a href="#" className="hover:text-yellow-700 dark:text-gray-300 dark:hover:text-red-400">Facebook /</a>
                             <a href="#" className="hover:text-yellow-700 dark:text-gray-300 dark:hover:text-red-400">YouTube / </a>
