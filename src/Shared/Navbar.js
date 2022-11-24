@@ -38,7 +38,7 @@ const Navbar = () => {
                                         <li>
                                             <NavLink className="block md:px-3">
                                                 <div className="relative text-yellow-800 dark:text-yellow-300
-                                                    before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yelloe-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800">
+                                                    before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yellow-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800">
                                                     <span>Home</span>
                                                 </div>
                                             </NavLink>
