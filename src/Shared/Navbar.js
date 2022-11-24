@@ -3,11 +3,6 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
 
-    const navItems =
-        <>
-
-        </>
-
     return (
         <>
             <div className="relative w-full">
@@ -17,7 +12,7 @@ const Navbar = () => {
                             <input type="checkbox" name="toggle_nav" id="toggle_nav" className="peer hidden" />
                             <div className="w-full flex justify-between md:w-max md:px-0">
                                 <NavLink aria-label="logo">
-                                    <img src="https://www.carlogos.org/car-logos/bmw-logo.png" className="w-36 grayscale dark:contrast-50 contrast-200" alt="tailus logo" width="144" height="68" />
+                                    <h1 className='text-3xl font-semibold grayscale contrast-200'>ORBIT ZONE</h1>
                                 </NavLink>
 
                                 <div className="flex items-center md:hidden max-h-10">
@@ -38,11 +33,6 @@ const Navbar = () => {
                     md:gap-y-4 md:p-0 
                     md:bg-transparent lg:w-7/12 fixed top-0 -left-full transition-all duration-500 peer-checked:left-0 max-w-sm h-full 
                     md:left-0 md:h-auto w-4/5 md:max-w-none md:relative lg:first-letter:top-0">
-                                <div className="flex md:hidden w-full pb-5">
-                                    <NavLink aria-label="logo">
-                                        <img src="images/logo.svg" className="w-36 grayscale contrast-200" alt="tailus logo" width="144" height="68" />
-                                    </NavLink>
-                                </div>
                                 <div className="block w-full h-full md:h-auto">
                                     <ul className="space-y-8 tracking-wide font-medium md:flex md:space-y-0">
                                         <li>
