@@ -42,9 +42,9 @@ const Hero = () => {
                             </div>
                         </Link>
                         <div>
-                            <a href="#" className="hover:text-yellow-700 dark:text-gray-300 dark:hover:text-red-400">Facebook /</a>
-                            <a href="#" className="hover:text-yellow-700 dark:text-gray-300 dark:hover:text-red-400">YouTube / </a>
-                            <a href="#" className="hover:text-yellow-700 dark:text-gray-300 dark:hover:text-red-400">Twitter</a>
+                            <Link className="hover:text-yellow-700 dark:text-gray-300 dark:hover:text-red-400">Facebook /</Link>
+                            <Link className="hover:text-yellow-700 dark:text-gray-300 dark:hover:text-red-400">YouTube / </Link>
+                            <Link className="hover:text-yellow-700 dark:text-gray-300 dark:hover:text-red-400">Twitter</Link>
                         </div>
                     </div>
                 </div>

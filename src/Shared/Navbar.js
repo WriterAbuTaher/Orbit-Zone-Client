@@ -16,7 +16,7 @@ const Navbar = () => {
                                 </NavLink>
 
                                 <div className="flex items-center md:hidden max-h-10">
-                                    <label role="button" htmlFor="toggle_nav" aria-label="humburger" id="hamburger" className="relative z-40 px-2 py-3 sm:-mr-6">
+                                    <label role="button" htmlFor="toggle_nav" aria-label="" id="hamburger" className="relative z-40 px-2 py-3 sm:-mr-6">
                                         <div id="line"
                                             className="m-auto h-0.5 w-6 rounded bg-sky-900 dark:bg-gray-300 transition duration-300"></div>
                                         <div id="line2"
