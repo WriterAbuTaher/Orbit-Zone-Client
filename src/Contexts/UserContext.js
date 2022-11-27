@@ -50,8 +50,6 @@ const UserContext = ({ children }) => {
         return () => unsubscribe();
     }, []);
 
-    console.log(user);
-
     return (
         <AuthContext.Provider
             value={{ user, registerEmailAndPassword, updateUserProfile, googleSignIn, loginWithEmailAndPassword, logOut, loading }}>
