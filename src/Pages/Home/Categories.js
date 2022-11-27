@@ -14,8 +14,6 @@ const Categories = () => {
         }
     })
 
-    console.log(categories);
-
     if (isLoading) {
         return <Loading></Loading>
     }
@@ -26,9 +24,9 @@ const Categories = () => {
             <div className='md:flex justify-center gap-8 mx-10'>
                 {
                     categories.map(category => {
-                        const { name, img, _id } = category
+                        const { name, img, _id, category_id } = category
                         return (
-                            <Link key={_id} className="group relative flex w-1/3 h-96 items-end bg-black">
+                            <Link to={`/categories/${category_id}`} key={_id} className="group relative flex w-1/3 h-96 items-end bg-black">
                                 <img
                                     alt="image"
                                     src={img}
