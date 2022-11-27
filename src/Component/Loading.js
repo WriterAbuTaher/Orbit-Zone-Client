@@ -4,7 +4,7 @@ import { ThreeCircles } from 'react-loader-spinner';
 const Loading = () => {
     return (
         <>
-            <h2 className="flex justify-center my-10">
+            <h2 className="flex justify-center py-40">
                 <ThreeCircles
                     height="100"
                     width="100"

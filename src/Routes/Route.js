@@ -8,7 +8,7 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
-import Vehicles from "../Pages/Vehicles/Vehicles";
+import Vehicles from "../Pages/Products/Products";
 import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
