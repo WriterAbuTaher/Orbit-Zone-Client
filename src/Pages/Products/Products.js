@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import Loading from '../../Component/Loading';
 import Modal from './Modal';
 
-const Vehicles = () => {
+const Products = () => {
 
     const id = useParams();
 
@@ -40,7 +40,6 @@ const Vehicles = () => {
                                         <div className="group h-80 block bg-gray-100 rounded-lg overflow-hidden relative mb-2 lg:mb-3">
                                             <img src={image_url} loading="lazy" alt="" className="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
                                         </div>
-
                                         <div>
                                             <Link className="text-gray-800 lg:text-2xl transition duration-100 mb-1">{product_name}</Link>
                                             <div className="flex items-end gap-2">
@@ -91,9 +90,8 @@ const Vehicles = () => {
                                                 </label>
                                             </div>
                                         </div>
-                                        <Modal></Modal>
+                                        <Modal product={e}></Modal>
                                     </div>
-
                                 )
                             })
                         }
@@ -104,4 +102,4 @@ const Vehicles = () => {
     );
 };
 
-export default Vehicles;
+export default Products;
