@@ -36,10 +36,10 @@ const Navbar = () => {
                                 <div className="block w-full h-full md:h-auto">
                                     <ul className="space-y-8 tracking-wide font-medium md:flex md:space-y-0">
                                         <li>
-                                            <NavLink to='/home' className="block md:px-3">
-                                                <div className="relative text-yellow-800 dark:text-yellow-300
-                                                    before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yellow-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800">
-                                                    <span>Home</span>
+                                            <NavLink to='/home' className="block md:px-3 group">
+                                                <div className="relative text-gray-600
+                                                    before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yellow-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100">
+                                                    <span className="transition group-hover:text-yellow-700 dark:text-gray-300 dark:group-hover:text-yellow-300">Home</span>
                                                 </div>
                                             </NavLink>
                                         </li>
