@@ -9,10 +9,12 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
-import MyProducts from "../Pages/Dashboard/MyProducts";
 import AllUsers from "../Pages/Dashboard/AllUsers";
 import AdminRoute from "./AdminRoute";
 import Products from "../Pages/Products/Products";
+import MyOrders from "../Pages/Dashboard/MyOrders";
+import MyProducts from "../Pages/Dashboard/MyProducts";
+import Error from "../Pages/Error/Error";
 
 export const router = createBrowserRouter([
     {
@@ -47,6 +49,10 @@ export const router = createBrowserRouter([
                 path: '/register',
                 element: <Register></Register>
             },
+            {
+                path: '*',
+                element: <Error></Error>
+            },
         ]
     },
     {
@@ -60,6 +66,10 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard/addproduct',
                 element: <AddProduct></AddProduct>
+            },
+            {
+                path: '/dashboard/myorders',
+                element: <MyOrders></MyOrders>
             },
             {
                 path: '/dashboard/myproducts',

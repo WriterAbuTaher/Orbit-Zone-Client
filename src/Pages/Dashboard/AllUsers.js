@@ -43,7 +43,7 @@ const AllUsers = () => {
                         {
                             users.map((user, i) => {
                                 return (
-                                    <tr>
+                                    <tr key={i}>
                                         <th>{i + 1}</th>
                                         <td>{user.name}</td>
                                         <td>{user.email}</td>

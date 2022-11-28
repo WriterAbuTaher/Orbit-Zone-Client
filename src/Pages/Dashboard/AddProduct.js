@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import { AuthContext } from "../../Contexts/UserContext";
 
 const AddProduct = () => {
     const {
@@ -8,6 +9,8 @@ const AddProduct = () => {
         formState: { errors },
         handleSubmit,
     } = useForm();
+
+    const { user } = useContext(AuthContext);
 
     const handleAddproduct = (data) => {
         const image = data.image[0];
@@ -29,7 +32,8 @@ const AddProduct = () => {
                         PurchaseYear: data.purchase,
                         condition: data.condition,
                         category_id: data.category,
-                        image_url: imgData.data.url
+                        image_url: imgData.data.url,
+                        email: user.email
                     };
                     console.log(addproduct);
                     fetch("https://orbit-zone.vercel.app/products", {
@@ -54,7 +58,7 @@ const AddProduct = () => {
                 <form onSubmit={handleSubmit(handleAddproduct)}>
                     <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2 items-center">
                         <div>
-                            <label htmlFor="name" className="block dark:text-gray-400">
+                            <label htmlFor="name" className="block text-gray-700">
                                 Product Name
                             </label>
                             <input
@@ -76,7 +80,7 @@ const AddProduct = () => {
                             <p className="text-red-600">{errors.name?.message}</p>
                         )}
                         <div>
-                            <label htmlFor="img" className="block dark:text-gray-400">
+                            <label htmlFor="img" className="block text-gray-700">
                                 Product Image
                             </label>
                             <input
@@ -92,7 +96,7 @@ const AddProduct = () => {
                             />
                         </div>
                         <div>
-                            <label htmlFor="originalprice" className="block dark:text-gray-400">
+                            <label htmlFor="originalprice" className="block text-gray-700">
                                 originalprice
                             </label>
                             <input
@@ -110,7 +114,7 @@ const AddProduct = () => {
                             <p className="text-red-600">{errors.originalprice?.message}</p>
                         )}
                         <div>
-                            <label htmlFor="resaleprice" className="block dark:text-gray-400">
+                            <label htmlFor="resaleprice" className="block text-gray-700">
                                 resaleprice
                             </label>
                             <input
@@ -128,7 +132,7 @@ const AddProduct = () => {
                             <p className="text-red-600">{errors.resaleprice?.message}</p>
                         )}
                         <div>
-                            <label htmlFor="location" className="block dark:text-gray-400">
+                            <label htmlFor="location" className="block text-gray-700">
                                 location
                             </label>
                             <input
@@ -141,7 +145,7 @@ const AddProduct = () => {
                             />
                         </div>
                         <div>
-                            <label htmlFor="phone" className="block dark:text-gray-400">
+                            <label htmlFor="phone" className="block text-gray-700">
                                 phone
                             </label>
                             <input
@@ -154,7 +158,7 @@ const AddProduct = () => {
                             />
                         </div>
                         <div>
-                            <label htmlFor="purchase" className="block dark:text-gray-400">
+                            <label htmlFor="purchase" className="block text-gray-700">
                                 purchase
                             </label>
                             <input
@@ -169,7 +173,7 @@ const AddProduct = () => {
                         <div>
                             <label
                                 htmlFor="condition"
-                                className="block dark:text-gray-400 mt-6"
+                                className="block text-gray-700 mt-6"
                             >
                                 Condition
                             </label>
@@ -183,28 +187,17 @@ const AddProduct = () => {
                             </select>
                         </div>
                         <div>
-                            <label htmlFor="category" className="block dark:text-gray-400 mt-6">
+                            <label htmlFor="category" className="block text-gray-700 mt-6">
                                 category
                             </label>
                             <select
                                 {...register("category", { required: true })}
                                 className="select select-bordered w-full"
                             >
-                                <option value="1">HP Laptop</option>
-                                <option value="2">DELL Laptop</option>
-                                <option value="3">WALTON Laptop</option>
+                                <option value="1">Super Cars</option>
+                                <option value="2">Luxary Cars</option>
+                                <option value="3">Sports</option>
                             </select>
-                        </div>
-                        <div>
-                            <label htmlFor="message" className="block dark:text-gray-400">
-                                Message
-                            </label>
-                            <textarea
-                                {...register("message", { required: "message is Required" })}
-                                name="message"
-                                placeholder="exmple@gmail.com"
-                                className="w-full px-4 py-3 rounded-md border-2 border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-300"
-                            />
                         </div>
                         <input
                             className="btn btn-secondary w-full rounded-none py-2 px-8 mt-6 text-gray-100"
