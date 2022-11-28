@@ -13,20 +13,18 @@ const AllUsers = () => {
         }
     });
 
-    console.log(users);
-
-    // const handleMakeAdmin = id => {
-    //     fetch(`http://localhost:5000/users/admin/${id}`, {
-    //         method: 'PUT'
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             if (data.modifiedCount > 0) {
-    //                 toast.success('Admin Added Successfully')
-    //                 refetch();
-    //             }
-    //         })
-    // }
+    const handleMakeAdmin = id => {
+        fetch(`http://localhost:5000/users/admin/${id}`, {
+            method: 'PUT'
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    toast.success('Admin Added Successfully')
+                    refetch();
+                }
+            })
+    }
 
 
     return (
@@ -50,6 +48,9 @@ const AllUsers = () => {
                                         <td>{user.name}</td>
                                         <td>{user.email}</td>
                                         <td>Blue</td>
+                                        <td>{
+                                            user?.role !== 'admin' && <button onClick={() => handleMakeAdmin(user._id)} className="btn">make admin</button>
+                                        }</td>
                                     </tr>
                                 )
                             })
