@@ -9,7 +9,6 @@ const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { loginWithEmailAndPassword, googleSignIn } = useContext(AuthContext);
     const [loginError, setLoginError] = useState('');
-    // const [loginUserEmail, setLoginUserEmail] = useState('');
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -22,7 +21,6 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                // setLoginUserEmail(data.email);
                 toast.success('Login Successfully')
                 navigate(from, { replace: true });
             })

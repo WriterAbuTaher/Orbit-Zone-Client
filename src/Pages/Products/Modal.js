@@ -23,7 +23,7 @@ const Modal = ({ product }) => {
 
         console.log(addProduct)
 
-        fetch("http://localhost:5000/bookings", {
+        fetch("https://orbit-zone.vercel.app/bookings", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

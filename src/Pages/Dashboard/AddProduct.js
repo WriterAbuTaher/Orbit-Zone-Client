@@ -29,12 +29,10 @@ const AddProduct = () => {
                         PurchaseYear: data.purchase,
                         condition: data.condition,
                         category_id: data.category,
-                        description: data.message,
-                        image_url: imgData.data.url,
-                        time: new Date()
+                        image_url: imgData.data.url
                     };
                     console.log(addproduct);
-                    fetch("http://localhost:5000/products", {
+                    fetch("https://orbit-zone.vercel.app/products", {
                         method: "POST",
                         headers: {
                             "content-type": "application/json"
@@ -173,7 +171,7 @@ const AddProduct = () => {
                                 htmlFor="condition"
                                 className="block dark:text-gray-400 mt-6"
                             >
-                                Condition*
+                                Condition
                             </label>
                             <select
                                 {...register("condition", { required: true })}
@@ -186,7 +184,7 @@ const AddProduct = () => {
                         </div>
                         <div>
                             <label htmlFor="category" className="block dark:text-gray-400 mt-6">
-                                category*
+                                category
                             </label>
                             <select
                                 {...register("category", { required: true })}
@@ -199,7 +197,7 @@ const AddProduct = () => {
                         </div>
                         <div>
                             <label htmlFor="message" className="block dark:text-gray-400">
-                                Message*
+                                Message
                             </label>
                             <textarea
                                 {...register("message", { required: "message is Required" })}

@@ -9,7 +9,7 @@ const MyProducts = () => {
     const { data: bookings = [], refetch } = useQuery({
         queryKey: ['bookings'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/bookings/${user.email}`);
+            const res = await fetch(`https://orbit-zone.vercel.app/bookings/${user.email}`);
             const data = await res.json();
             return data;
         }

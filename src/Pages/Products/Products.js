@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Loading from '../../Component/Loading';
 import Modal from './Modal';
 
@@ -19,7 +19,7 @@ const Products = () => {
         }
     })
 
-    console.log(products);
+    console.log(booking);
 
     if (isLoading) {
         return <Loading></Loading>
@@ -41,7 +41,7 @@ const Products = () => {
                                             <img src={image_url} loading="lazy" alt="" className="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
                                         </div>
                                         <div>
-                                            <Link className="text-gray-800 lg:text-2xl transition duration-100 mb-1">{product_name}</Link>
+                                            <h1 className="text-gray-800 lg:text-2xl transition duration-100 mb-1">{product_name}</h1>
                                             <div className="flex items-end gap-2">
                                                 <span className="text-gray-800 lg:text-lg font-bold">${price}</span>
                                             </div>
