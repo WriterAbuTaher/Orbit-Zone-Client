@@ -78,7 +78,7 @@ const DashBoardLayout = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link
+                                <Link to='/dashboard/myproducts'
                                     className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600 dark:text-gray-300"
                                 >
                                     <svg

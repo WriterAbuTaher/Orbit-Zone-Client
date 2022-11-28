@@ -10,6 +10,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Vehicles from "../Pages/Products/Products";
 import PrivateRoute from "./PrivateRoute";
+import MyProducts from "../Pages/Dashboard/MyProducts";
 
 export const router = createBrowserRouter([
     {
@@ -59,8 +60,8 @@ export const router = createBrowserRouter([
                 element: <AddProduct></AddProduct>
             },
             {
-                path: '/dashboard/alluser',
-                element: ""
+                path: '/dashboard/myproducts',
+                element: <MyProducts></MyProducts>
             },
         ]
 
