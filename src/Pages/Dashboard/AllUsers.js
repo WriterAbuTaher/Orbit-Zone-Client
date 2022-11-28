@@ -29,14 +29,15 @@ const AllUsers = () => {
 
     return (
         <>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto py-20">
                 <table className="table w-full">
                     <thead>
                         <tr>
                             <th></th>
                             <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Make Admin</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -47,7 +48,7 @@ const AllUsers = () => {
                                         <th>{i + 1}</th>
                                         <td>{user.name}</td>
                                         <td>{user.email}</td>
-                                        <td>Blue</td>
+                                        <td>{user.role ? "Admin" : "User"}</td>
                                         <td>{
                                             user?.role !== 'admin' && <button onClick={() => handleMakeAdmin(user._id)} className="btn">make admin</button>
                                         }</td>

@@ -46,7 +46,7 @@ const AddProduct = () => {
                         .then((res) => res.json())
                         .then((data) => {
                             console.log(data);
-                            toast.success("Product added successfully");
+                            toast.success("Product Added Successfully");
 
                         });
                 }
@@ -54,7 +54,7 @@ const AddProduct = () => {
     };
     return (
         <div>
-            <div className="max-w-4xl mx-auto bg-white rounded-md shadow-md dark:bg-gray-100">
+            <div className="mx-auto py-10">
                 <form onSubmit={handleSubmit(handleAddproduct)}>
                     <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2 items-center">
                         <div>
@@ -75,10 +75,10 @@ const AddProduct = () => {
                                 placeholder="Product Name"
                                 className="w-full px-4 py-3 rounded-md border-2 border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-300"
                             />
+                            {errors.name && (
+                                <p className="text-red-600">{errors.name?.message}</p>
+                            )}
                         </div>
-                        {errors.name && (
-                            <p className="text-red-600">{errors.name?.message}</p>
-                        )}
                         <div>
                             <label htmlFor="img" className="block text-gray-700">
                                 Product Image
@@ -97,7 +97,7 @@ const AddProduct = () => {
                         </div>
                         <div>
                             <label htmlFor="originalprice" className="block text-gray-700">
-                                originalprice
+                                Original Price
                             </label>
                             <input
                                 {...register("originalprice", {
@@ -109,13 +109,13 @@ const AddProduct = () => {
                                 placeholder="originalprice"
                                 className="w-full px-4 py-3 rounded-md border-2 border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-300"
                             />
+                            {errors.email && (
+                                <p className="text-red-600">{errors.originalprice?.message}</p>
+                            )}
                         </div>
-                        {errors.email && (
-                            <p className="text-red-600">{errors.originalprice?.message}</p>
-                        )}
                         <div>
                             <label htmlFor="resaleprice" className="block text-gray-700">
-                                resaleprice
+                                Resale Price
                             </label>
                             <input
                                 {...register("resaleprice", {
@@ -127,13 +127,13 @@ const AddProduct = () => {
                                 placeholder="resaleprice"
                                 className="w-full px-4 py-3 rounded-md border-2 border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-300"
                             />
+                            {errors.email && (
+                                <p className="text-red-600">{errors.resaleprice?.message}</p>
+                            )}
                         </div>
-                        {errors.email && (
-                            <p className="text-red-600">{errors.resaleprice?.message}</p>
-                        )}
                         <div>
                             <label htmlFor="location" className="block text-gray-700">
-                                location
+                                Location
                             </label>
                             <input
                                 {...register("location", { required: "location is Required" })}
@@ -146,7 +146,7 @@ const AddProduct = () => {
                         </div>
                         <div>
                             <label htmlFor="phone" className="block text-gray-700">
-                                phone
+                                Phone
                             </label>
                             <input
                                 {...register("phone", { required: "phone is Required" })}
@@ -159,7 +159,7 @@ const AddProduct = () => {
                         </div>
                         <div>
                             <label htmlFor="purchase" className="block text-gray-700">
-                                purchase
+                                Uses Year
                             </label>
                             <input
                                 {...register("purchase", { required: "purchase is Required" })}
@@ -181,7 +181,7 @@ const AddProduct = () => {
                                 {...register("condition", { required: true })}
                                 className="select select-bordered w-full"
                             >
-                                <option>excellent</option>
+                                <option>Excellent</option>
                                 <option>Good</option>
                                 <option>Fair</option>
                             </select>
@@ -195,12 +195,12 @@ const AddProduct = () => {
                                 className="select select-bordered w-full"
                             >
                                 <option value="1">Super Cars</option>
-                                <option value="2">Luxary Cars</option>
-                                <option value="3">Sports</option>
+                                <option value="2">Luxury Cars</option>
+                                <option value="3">Sports Cars</option>
                             </select>
                         </div>
                         <input
-                            className="btn btn-secondary w-full rounded-none py-2 px-8 mt-6 text-gray-100"
+                            className="btn btn-primary w-full rounded-none py-2 px-8 mt-6 text-gray-100"
                             value="Add a Product"
                             type="submit"
                         />
@@ -208,6 +208,7 @@ const AddProduct = () => {
                 </form>
             </div>
         </div>
+
     );
 };
 
