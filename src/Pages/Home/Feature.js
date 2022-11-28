@@ -5,7 +5,7 @@ const Feature = () => {
     return (
         <>
 
-            <div className="py-16">
+            <div>
                 <div className="xl:container m-auto px-6 text-gray-500 md:px-12">
                     <div className='text-center'>
                         <h2 className="mt-4 text-2xl font-bold text-gray-700 dark:text-white md:text-4xl">
