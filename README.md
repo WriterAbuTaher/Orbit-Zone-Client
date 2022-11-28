@@ -32,7 +32,6 @@ Documention Link: [Express JS](https://expressjs.com/)
 - [Tailus](https://tailus.io/blocks)
 - [Icons 8](https://icons8.com/)
 
-## Admin Email
-- admin@zone.com
-## Admin Password
-- 12345678
+## Admin Email And Password
+- adminEmail: admin@zone.com
+- adminPassword: 12345678
