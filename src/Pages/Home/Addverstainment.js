@@ -1,10 +1,12 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css';
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import Loading from '../../Component/Loading';
 
 const Addverstainment = () => {
 
-    const { data: adverstainment = [] } = useQuery({
+    const { data: adverstainment = [], isLoading } = useQuery({
         queryKey: ['adverstainment'],
         queryFn: async () => {
             const res = await fetch('https://orbit-zone.vercel.app/adverstainment');
@@ -13,7 +15,9 @@ const Addverstainment = () => {
         }
     });
 
-    console.log(adverstainment);
+    if (isLoading) {
+        return <Loading></Loading>
+    }
 
     return (
         <>
@@ -21,7 +25,7 @@ const Addverstainment = () => {
                 <h1 className='text-4xl font-bold text-center my-8'>Our Some Adverstainment Vehicles</h1>
                 <Splide options={{
                     perPage: 3,
-                    arrows: false,
+                    arrows: true,
                     pagination: true,
                     drag: "free",
                 }}>
@@ -34,13 +38,10 @@ const Addverstainment = () => {
                                         <div className="group h-80 block bg-gray-100 rounded-lg overflow-hidden relative mb-2 lg:mb-3">
                                             <img src={e.image_url} loading="lazy" alt="Photo by Rachit Tank" className="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
                                         </div>
-
                                         <div>
                                             <h1 className="text-gray-500 hover:gray-800 text-3xl transition duration-100 mb-1">{e.product_name}</h1>
-
                                             <div className="flex items-end gap-2">
                                                 <span className="text-gray-800 lg:text-lg font-bold">${e.original_price}</span>
-
                                             </div>
                                         </div>
                                     </div>

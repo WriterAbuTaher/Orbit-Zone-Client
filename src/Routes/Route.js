@@ -15,6 +15,7 @@ import Products from "../Pages/Products/Products";
 import MyOrders from "../Pages/Dashboard/MyOrders";
 import MyProducts from "../Pages/Dashboard/MyProducts";
 import Error from "../Pages/Error/Error";
+import Vehicles from "../Pages/Vehicles/Vehicles";
 
 export const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
             {
                 path: '/home',
                 element: <Home></Home>
+            },
+            {
+                path: '/vehicles',
+                element: <Vehicles></Vehicles>
             },
             {
                 path: '/categories/:id',

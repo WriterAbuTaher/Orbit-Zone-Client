@@ -1,12 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
+import Loading from '../../Component/Loading';
 import { AuthContext } from '../../Contexts/UserContext';
 
 const MyOrders = () => {
 
     const { user } = useContext(AuthContext)
 
-    const { data: bookings = [] } = useQuery({
+    const { data: bookings = [], isLoading } = useQuery({
         queryKey: ['bookings'],
         queryFn: async () => {
             const res = await fetch(`https://orbit-zone.vercel.app/bookings/${user.email}`);
@@ -14,6 +15,10 @@ const MyOrders = () => {
             return data;
         }
     });
+
+    if (isLoading) {
+        return <Loading></Loading>
+    }
 
     return (
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 p-8'>
