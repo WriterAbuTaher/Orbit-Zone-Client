@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import { AuthContext } from '../Contexts/UserContext';
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+    }
+
 
     return (
         <>
@@ -79,16 +87,28 @@ const Navbar = () => {
                                 </div>
 
                                 <div className="w-full gap-y-4 md:w-max md:gap-y-0 md:gap-x-4 flex md:flex-row flex-col">
-                                    <NavLink to='/login' type="button" title="Start buying" className="group w-full py-3 px-6 text-center transition dark:active:bg-yellow-800 dark:focus:bg-yellow-900 active:bg-yellow-200 focus:bg-yellow-100 sm:w-max">
-                                        <span className="block text-gray-700 dark:text-gray-300 font-semibold group-focus:text-yellow-700 dark:group-focus:text-yellow-100">
-                                            Login
-                                        </span>
-                                    </NavLink>
-                                    <NavLink to='/register' type="button" title="Start buying" className="w-full py-3 px-6 text-center transition dark:bg-gray-700 bg-gray-900 hover:bg-gray-800 active:bg-gray-700 focus:bg-gray-800 md:w-max">
-                                        <span className="block text-white font-semibold">
-                                            Register
-                                        </span>
-                                    </NavLink>
+                                    {
+                                        !user ?
+                                            <>
+                                                <NavLink to='/login' type="button" title="Login" className="group w-full py-3 px-6 text-center transition dark:active:bg-yellow-800 dark:focus:bg-yellow-900 active:bg-yellow-200 focus:bg-yellow-100 sm:w-max">
+                                                    <span className="block text-gray-700 dark:text-gray-300 font-semibold group-focus:text-yellow-700 dark:group-focus:text-yellow-100">
+                                                        Login
+                                                    </span>
+                                                </NavLink>
+                                                <NavLink to='/register' type="button" title="Register" className="w-full py-3 px-6 text-center transition dark:bg-gray-700 bg-gray-900 hover:bg-gray-800 active:bg-gray-700 focus:bg-gray-800 md:w-max">
+                                                    <span className="block text-white font-semibold">
+                                                        Register
+                                                    </span>
+                                                </NavLink>
+                                            </>
+                                            :
+                                            <button onClick={handleLogOut} type="button" title="Log Out" className="w-full py-3 px-6 text-center transition dark:bg-gray-700 bg-gray-900 hover:bg-gray-800 active:bg-gray-700 focus:bg-gray-800 md:w-max">
+                                                <span className="block text-white font-semibold">
+                                                    Log Out
+                                                </span>
+                                            </button>
+
+                                    }
                                 </div>
                             </div>
                         </div>

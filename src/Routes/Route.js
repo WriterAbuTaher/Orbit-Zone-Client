@@ -11,6 +11,7 @@ import Register from "../Pages/Register/Register";
 import Vehicles from "../Pages/Products/Products";
 import PrivateRoute from "./PrivateRoute";
 import MyProducts from "../Pages/Dashboard/MyProducts";
+import AllUsers from "../Pages/Dashboard/AllUsers";
 
 export const router = createBrowserRouter([
     {
@@ -62,6 +63,10 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard/myproducts',
                 element: <MyProducts></MyProducts>
+            },
+            {
+                path: '/dashboard/allusers',
+                element: <AllUsers></AllUsers>
             },
         ]
 
