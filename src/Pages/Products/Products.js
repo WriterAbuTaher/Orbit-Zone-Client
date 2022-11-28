@@ -26,11 +26,11 @@ const Products = () => {
     }
 
     return (
-        <>
+        <div className='py-20'>
             <div className="bg-white py-6 sm:py-8 lg:py-12">
                 <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
 
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 md:gap-x-8 gap-y-8">
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 md:gap-x-10 gap-y-8">
                         {
                             products.map(e => {
                                 const { product_name, original_price, price, location, mobile, PurchaseYear, condition, image_url, _id } = e;
@@ -41,7 +41,7 @@ const Products = () => {
                                             <img src={image_url} loading="lazy" alt="" className="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
                                         </div>
                                         <div>
-                                            <h1 className="text-gray-800 lg:text-2xl transition duration-100 mb-1">{product_name}</h1>
+                                            <h1 className="text-gray-800 lg:text-3xl transition duration-100 mb-1">{product_name}</h1>
                                             <div className="flex items-end gap-2">
                                                 <span className="text-gray-800 lg:text-lg font-bold">${price}</span>
                                             </div>
@@ -98,7 +98,7 @@ const Products = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

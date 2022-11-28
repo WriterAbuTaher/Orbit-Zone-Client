@@ -54,11 +54,11 @@ const Modal = ({ product }) => {
                                 <span className="text-gray-800 lg:text-lg font-bold">${price}</span>
                             </div>
                         </div>
-                        <div className="form-control w-full max-w-xs">
-                            <input name='number' type="text" placeholder="Your Number" className="input input-bordered w-full max-w-xs" />
+                        <div className="form-control w-full max-w-xs my-4">
+                            <input name='number' type="number" placeholder="Your Number" className="input input-bordered w-full max-w-xs" required />
                         </div>
-                        <div className="form-control w-full max-w-xs">
-                            <input name='address' type="text" placeholder="Your Address" className="input input-bordered w-full max-w-xs" />
+                        <div className="form-control w-full max-w-xs my-4">
+                            <input name='address' type="text" placeholder="Your Address" className="input input-bordered w-full max-w-xs" required />
                         </div>
                         <button type='submit' className='btn'>Book Now</button>
                     </form>

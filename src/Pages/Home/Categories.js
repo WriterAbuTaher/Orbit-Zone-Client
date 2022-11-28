@@ -19,8 +19,8 @@ const Categories = () => {
     }
 
     return (
-        <>
-
+        <div className='my-10'>
+            <h1 className='text-5xl font-bold text-center py-8'>See Our Some Categories</h1>
             <div className='md:flex justify-center gap-8 mx-10'>
                 {
                     categories.map(category => {
@@ -45,7 +45,7 @@ const Categories = () => {
                     })
                 }
             </div>
-        </>
+        </div>
     );
 };
 
