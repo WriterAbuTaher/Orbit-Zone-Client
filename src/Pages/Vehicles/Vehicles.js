@@ -1,16 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
-import React, { useState } from 'react';
 import Loading from '../../Component/Loading';
-import Modal from '../Products/Modal';
 
 const Vehicles = () => {
-
-    const [booking, setBooking] = useState(null);
 
     const { data: products = [], isLoading } = useQuery({
         queryKey: ["products"],
         queryFn: async () => {
-            const res = await fetch('https://orbit-zone.vercel.app/products');
+            const res = await fetch('https://orbit-zone.vercel.app/allproducts');
             const data = await res.json();
             return data;
         }
@@ -68,25 +64,6 @@ const Vehicles = () => {
                                                 <div>
                                                 </div>
                                             </div>
-                                            <div className="mt-4 text-sm">
-                                                <div>
-                                                    <label
-                                                        htmlFor="my-modal-3"
-                                                        onClick={() => setBooking(e)}
-                                                        className="group relative inline-block text-sm font-medium text-white focus:outline-none focus:ring"
-                                                    >
-                                                        <span
-                                                            className="absolute inset-0 border border-gray-600 group-active:border-gray-500"
-                                                        ></span>
-                                                        <span
-                                                            className="block border border-gray-600 bg-gray-600 px-12 py-3 transition-transform active:border-gray-500 active:bg-gray-500 group-hover:-translate-x-1 group-hover:-translate-y-1"
-                                                        >
-                                                            Book Now
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <Modal product={e}></Modal>
                                         </div>
                                     )
                                 })

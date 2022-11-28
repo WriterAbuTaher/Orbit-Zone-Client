@@ -33,7 +33,7 @@ const Modal = ({ product }) => {
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
-                toast.success("Product added successfully");
+                toast.success("Product Booking Successfully");
             });
     }
 

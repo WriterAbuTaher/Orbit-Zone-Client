@@ -21,7 +21,7 @@ const MyOrders = () => {
     }
 
     return (
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 p-8'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 py-8 px-4'>
             {
                 bookings.map(e => {
                     const { _id, image_url, product_name, price, number, address } = e;

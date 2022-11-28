@@ -10,7 +10,7 @@ const firebaseConfig = {
     projectId: "orbit-zone",
     storageBucket: "orbit-zone.appspot.com",
     messagingSenderId: "266009590846",
-    appId: "1:266009590846:web:fd24338f28fa1a0f36256f"
+    appId: "1:266009590846:web:fd24338f28fa1a0f36256f",
 };
 
 // Initialize Firebase

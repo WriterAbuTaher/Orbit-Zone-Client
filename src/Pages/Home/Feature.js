@@ -5,15 +5,15 @@ const Feature = () => {
     return (
         <>
 
-            <div>
+            <div className='mt-20'>
                 <div className="xl:container m-auto px-6 text-gray-500 md:px-12">
                     <div className='text-center'>
-                        <h2 className="mt-4 text-2xl font-bold text-gray-700 dark:text-white md:text-4xl">
+                        <h2 className="mt-2 text-2xl font-bold text-gray-700 dark:text-white md:text-4xl">
                             What Our Serve For You
                         </h2>
                     </div>
                     <div
-                        className="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-3 lg:divide-y-0 xl:grid-cols-3"
+                        className="mt-8 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-3 lg:divide-y-0 xl:grid-cols-3"
                     >
                         <div className="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
                             <div className="relative space-y-8 py-12 p-8">

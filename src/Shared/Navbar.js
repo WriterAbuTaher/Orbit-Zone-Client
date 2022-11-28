@@ -10,7 +10,6 @@ const Navbar = () => {
         logOut()
     }
 
-
     return (
         <>
             <div className="relative w-full">
