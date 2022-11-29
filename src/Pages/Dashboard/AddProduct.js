@@ -106,7 +106,7 @@ const AddProduct = () => {
                                 type="text"
                                 name="originalprice"
                                 id="originalprice"
-                                placeholder="originalprice"
+                                placeholder="Original Price"
                                 className="w-full px-4 py-3 rounded-md border-2 border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-300"
                             />
                             {errors.email && (
@@ -124,7 +124,7 @@ const AddProduct = () => {
                                 type="text"
                                 name="resaleprice"
                                 id="resaleprice"
-                                placeholder="resaleprice"
+                                placeholder="Resale Price"
                                 className="w-full px-4 py-3 rounded-md border-2 border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-300"
                             />
                             {errors.email && (
@@ -153,7 +153,7 @@ const AddProduct = () => {
                                 type="text"
                                 name="phone"
                                 id="phone"
-                                placeholder="phone"
+                                placeholder="Phone"
                                 className="w-full px-4 py-3 rounded-md border-2 border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-300"
                             />
                         </div>
@@ -166,7 +166,7 @@ const AddProduct = () => {
                                 type="text"
                                 name="purchase"
                                 id="purchase"
-                                placeholder="purchase"
+                                placeholder="Uses Year"
                                 className="w-full px-4 py-3 rounded-md border-2 border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-300"
                             />
                         </div>
