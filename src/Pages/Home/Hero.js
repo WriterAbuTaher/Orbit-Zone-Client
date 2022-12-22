@@ -15,16 +15,16 @@ const Hero = () => {
                             <h1 className="text-4xl font-bold md:text-6xl dark:text-white">Perfect Way <br /> To Buy And Sell <br /> Car On Our Platform.</h1>
 
                             <div className="flex space-x-4">
-                                <button type="button" title="Start Buying" className="w-full py-3 px-6 text-center transition bg-gray-900 dark:bg-gray-700 hover:bg-gray-800 active:bg-gray-700 focus:bg-gray-800 sm:w-max">
+                                <Link type="button" title="Start Buying" className="w-full py-3 px-6 text-center transition bg-gray-900 dark:bg-gray-700 hover:bg-gray-800 active:bg-gray-700 focus:bg-gray-800 sm:w-max">
                                     <span className="block text-white font-semibold">
                                         Buy Now
                                     </span>
-                                </button>
-                                <button type="button" title="Start Selling" className="group w-full py-3 px-6 text-center transition dark:active:bg-yellow-800 dark:focus:bg-yellow-900 active:bg-yellow-200 focus:bg-yellow-100 sm:w-max">
+                                </Link>
+                                <Link type="button" title="Start Selling" className="group w-full py-3 px-6 text-center transition dark:active:bg-yellow-800 dark:focus:bg-yellow-900 active:bg-yellow-200 focus:bg-yellow-100 sm:w-max">
                                     <span className="block text-gray-700 dark:text-white font-semibold group-focus:text-yellow-700 dark:group-focus:text-yellow-100">
                                         Sell Now
                                     </span>
-                                </button>
+                                </Link>
                             </div>
                         </div>
 

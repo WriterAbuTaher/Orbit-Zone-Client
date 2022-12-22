@@ -35,8 +35,8 @@ const Addverstainment = () => {
                         {
                             adverstainment.map(e => {
                                 return (
-                                    <SplideSlide>
-                                        <div key={e._id}>
+                                    <SplideSlide key={e._id}>
+                                        <div>
                                             <div className="group h-80 block bg-gray-100 rounded-lg overflow-hidden relative mb-2 lg:mb-3">
                                                 <img src={e.image_url} loading="lazy" alt="Photo by Rachit Tank" className="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
                                             </div>
